@@ -10,6 +10,8 @@ import './App.css'
 
 // Components
 import NavBar from "./components/navbar"
+import HomePage from "./components/pages/HomePage"
+
 
 class App extends React.Component {
     render() {
@@ -23,8 +25,12 @@ class App extends React.Component {
                             <h1>About Page</h1>
                         </Route>
 
+                        <Route path="/pokemon/:id">
+                            <h1>Specific Pokemon</h1>
+                        </Route>
+
                         <Route path="/">
-                            <h1>Home Page</h1>
+                            <HomePage/>
                         </Route>
                     </Switch>
                 </div>
