@@ -13,7 +13,7 @@ class HomePage extends Component {
             img: "",
             hidden: false,
         }],
-        limit: 12,
+        limit: 18,
         search: "",
     }
 
