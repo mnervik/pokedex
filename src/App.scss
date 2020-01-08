@@ -1,0 +1,8 @@
+h1 {
+  font-family: "Pokemon Solid", cursive;
+  color: orange;
+
+  $border-size: 2px;
+  text-shadow: (-$border-size) 0 black, 0 ($border-size) black, ($border-size) 0 black, 0 (-$border-size) black;
+  margin-bottom: 30px;
+}

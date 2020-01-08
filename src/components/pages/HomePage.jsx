@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import axios from 'axios'
 import {Link} from "react-router-dom"
 
+import './HomePage.scss'
+
 class HomePage extends Component {
     state = {
         pokemon: [{
@@ -20,19 +22,17 @@ class HomePage extends Component {
     render() {
         return (
             <div>
-                <h1>HomePage</h1>
+                <h1 className="text-center">Pokemon List</h1>
 
                 <div className="row">
-                    {this.state.pokemon.map(pokemon => (
-                        <div className="col-2">
-                            <div className="card">
-                                <img className="card-img-top" src={pokemon.img} alt="pokemon"/>
-                                <div className="card-body">
-                                    <h5 className="card-title">{pokemon.name}</h5>
-                                    <p className="card-text">weight: {pokemon.weight}</p>
-                                    <Link className="btn btn-primary" to={`/pokemon/${pokemon.id}`}>
-                                        More Info
-                                    </Link>
+                    {this.state.pokemon.map((pokemon, key) => (
+                        <div className="col-xl-2 col-lg-3 col-sm-4 col-6" key={key}>
+                            <div className="card pokemon">
+                                <img className="card-img-top pokemon__img" src={pokemon.img} alt="pokemon"/>
+                                <div className="card-body pokemon-details">
+                                    <h5 className="card-title pokemon-details__name">{pokemon.name}</h5>
+                                    <p className="card-text pokemon-details__weight">weight: {pokemon.weight}</p>
+                                    <Link className="btn btn-primary" to={`/pokemon/${pokemon.id}`}>More Info</Link>
                                 </div>
                             </div>
                         </div>

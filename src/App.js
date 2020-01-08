@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 
 // Styles
-import './App.css'
+import './App.scss'
 
 // Components
 import NavBar from "./components/navbar"
