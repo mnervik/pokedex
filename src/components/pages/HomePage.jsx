@@ -11,12 +11,33 @@ class HomePage extends Component {
             name: "",
             weight: 0,
             img: "",
+            hidden: false,
         }],
-        limit: 10
+        limit: 12,
+        search: "",
     }
 
     componentDidMount() {
         this.getData()
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (prevState.search !== this.state.search) {
+            let arr = [...this.state.pokemon]
+            for (let i = this.state.pokemon.length - 1; i >= 0; i--) {
+                let name = this.state.pokemon[i].name
+
+                arr[i].hidden = (name.indexOf(this.state.search) === -1)
+            }
+
+            this.setState({arr})
+        }
+    }
+
+    handleChange(e) {
+        this.setState({
+            search: e.target.value
+        })
     }
 
     render() {
@@ -24,9 +45,17 @@ class HomePage extends Component {
             <div>
                 <h1 className="text-center">Pokemon List</h1>
 
-                <div className="row">
+                <form className="search-form">
+                    <input
+                        type="search"
+                        className="search-form__input"
+                        onChange={this.handleChange.bind(this)}
+                        value={this.state.search}/>
+                </form>
+
+                <div className="row mt-2">
                     {this.state.pokemon.map((pokemon, key) => (
-                        <div className="col-xl-2 col-lg-3 col-sm-4 col-6" key={key}>
+                        <div className={pokemon.hidden ? 'd-none' : "col-xl-2 col-lg-3 col-sm-4 col-6"} key={key}>
                             <div className="card pokemon">
                                 <img className="card-img-top pokemon__img" src={pokemon.img} alt="pokemon"/>
                                 <div className="card-body pokemon-details">

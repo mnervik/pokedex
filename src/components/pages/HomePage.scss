@@ -8,3 +8,10 @@
   font-family: 'Press Start 2P', cursive;
   font-size: 0.8em;
 }
+
+.search-form {
+  text-align: center;
+  &__input {
+    display: inline-block;
+  }
+}
