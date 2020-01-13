@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d6e4675a.chunk.css",
+    "main.js": "/static/js/main.ba33ec00.chunk.js",
+    "main.js.map": "/static/js/main.ba33ec00.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.44184d1d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.44184d1d.js.map",
+    "static/js/2.a7433186.chunk.js": "/static/js/2.a7433186.chunk.js",
+    "static/js/2.a7433186.chunk.js.map": "/static/js/2.a7433186.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.07daa56987fbda3ea4677226db22314e.js": "/precache-manifest.07daa56987fbda3ea4677226db22314e.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.d6e4675a.chunk.css.map": "/static/css/main.d6e4675a.chunk.css.map",
+    "static/js/2.a7433186.chunk.js.LICENSE": "/static/js/2.a7433186.chunk.js.LICENSE",
+    "static/media/index.scss": "/static/media/Pokemon Solid.36d26dbc.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.44184d1d.js",
+    "static/js/2.a7433186.chunk.js",
+    "static/css/main.d6e4675a.chunk.css",
+    "static/js/main.ba33ec00.chunk.js"
+  ]
+}
